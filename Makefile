@@ -8,7 +8,7 @@ build: clean
 	helm version
 	helm init
 	helm repo add --username ${CHARTMUSEUM_CREDS_USR} --password ${CHARTMUSEUM_CREDS_PSW} releases ${CHART_REPO}
-	helm repo add jenkins-x http://chartmuseum.build.cd.jenkins-x.io
+	helm repo add jenkins-x https://chartmuseum.build.cd.jenkins-x.io
 	helm dependency build ${DIR}
 	helm lint ${DIR}
 
