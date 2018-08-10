@@ -6,6 +6,7 @@ pipeline {
     label "jenkins-maven"
   }
   environment {
+    CHARTMUSEUM_CREDS = credentials('jenkins-x-chartmuseum')
     DEPLOY_NAMESPACE = "hhs-int"
   }
   stages {
