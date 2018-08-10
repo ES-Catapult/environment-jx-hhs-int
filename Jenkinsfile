@@ -12,9 +12,7 @@ pipeline {
     stage('Validate Environment') {
       steps {
         container('maven') {
-          dir('env') {
-            sh 'make build'
-          }
+          sh 'make build'
         }
       }
     }
